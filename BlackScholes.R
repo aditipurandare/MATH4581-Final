@@ -42,9 +42,9 @@ for (ticker in tickers) {
 # Define parameters for Black-Scholes pricing
 for (ticker in tickers) {
   S <- prices[[ticker]][nrow(prices[[ticker]])] # underlying asset price (current price as of 4/18/2023)
-  K <- 25 # strike price
+  K <- n1 # strike price
   r <- 0.0358 # risk-free interest rate
-  t <- 28/365 # time to maturity (in years)
+  t <- n2/365 # time to maturity (in years)
   sigma <- as.numeric(volatilities[ticker])
   # Price a European call option that matures in one year if the current stock price is 80
   bslist <- list()
